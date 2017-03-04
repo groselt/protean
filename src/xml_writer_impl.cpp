@@ -555,7 +555,7 @@ namespace protean { namespace detail {
                 m_os << start_tag();
                 const void *data = element.as<void*>();
                 size_t size = element.size();
-                if (data!=NULL && size>0)
+                if (data!=nullptr && size>0)
                 {
                     unsigned int n = 0;
                     boost::scoped_ptr<char> b64(detail::b64_encode((const char*)data, (unsigned int)size, &n));

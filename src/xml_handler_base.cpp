@@ -18,7 +18,7 @@ namespace protean { namespace detail {
         const XMLCh* const /*publicId*/,
         const XMLCh* const systemId )
     {
-        xercesc::InputSource* result = NULL;
+        xercesc::InputSource* result = nullptr;
 
         std::string name = xml_utility::transcode(systemId);
         entity_stream_map_t::iterator it(m_entities.find(name));
@@ -102,7 +102,7 @@ namespace protean { namespace detail {
     xml_handler_base::xml_handler_base(variant& result, int mode) :
         m_result(result),
         m_mode(mode),
-        m_locator(NULL)
+        m_locator(nullptr)
     { }
 
     xml_handler_base::~xml_handler_base()

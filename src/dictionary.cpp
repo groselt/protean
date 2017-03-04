@@ -14,7 +14,7 @@ namespace protean { namespace detail {
     int dictionary::compare(const collection& rhs) const
     {
         const dictionary* cast_rhs = dynamic_cast<const dictionary*>(&rhs);
-        if (cast_rhs==NULL)
+        if (cast_rhs==nullptr)
         {
             boost::throw_exception(variant_error("Unable to cast collection to dictionary"));
         }

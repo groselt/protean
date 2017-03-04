@@ -1317,7 +1317,7 @@ namespace protean {
                     oss << "Buffer(";
 
                     const unsigned char* byteArray((const unsigned char*)as<void*>());
-                    if (byteArray!=NULL)
+                    if (byteArray!=nullptr)
                     {
                         for(size_t i=0; i<size(); ++i)
                         {
@@ -1327,7 +1327,7 @@ namespace protean {
                     }
                     else
                     {
-                        oss << "NULL";
+                        oss << "nullptr";
                     }
                     oss << ')';
                 }

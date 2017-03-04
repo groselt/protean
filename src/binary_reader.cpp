@@ -24,7 +24,7 @@ namespace protean {
     binary_reader::binary_reader(std::istream &is, int mode) :
         m_is(is),
         m_mode(mode),
-        m_factory(NULL)
+        m_factory(nullptr)
     {
     }
 
@@ -220,7 +220,7 @@ namespace protean {
                 read(version);
 
                 handle<object> obj;
-                if (m_factory!=NULL)
+                if (m_factory!=nullptr)
                 {
                     obj = m_factory->create_instance(class_name);
                     if (obj.null())
