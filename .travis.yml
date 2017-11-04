@@ -10,6 +10,7 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.9
+    #- libxerces-c-dev
 
 compiler:
   - g++
@@ -18,6 +19,9 @@ install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9"; fi
 #  - pip install cpp-coveralls --user `whoami`
 #  - source ./travis/gtest.sh
+
+before_script:
+  - find / -type f -name 'gregorian.hpp'
 
 script:
   - scons
