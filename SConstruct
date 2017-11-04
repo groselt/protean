@@ -7,7 +7,7 @@ user_libs = ['libboost_date_time.so.1.54.0',
              'libboost_system.so.1.54.0',
              'libxerces-c-3.1.so']
 
-env = Environment(CPPPATH=['#'],
+env = Environment(CPPPATH=['#', '/usr/include'],
                   CPPFLAGS=['-Wno-multichar', '-std=c++11', '-s', '-O3', '-fdata-sections', '-ffunction-sections'],
                   LINKFLAGS=['-Wl,--gc-sections'],
                   LIBPATH=['#'])
