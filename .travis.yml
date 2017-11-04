@@ -1,0 +1,30 @@
+language: cpp
+
+cache:
+  apt: true
+
+addons:
+  apt:
+    sources:
+    - boost-latest
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.9
+
+compiler:
+  - g++
+
+install:
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9"; fi
+#  - pip install cpp-coveralls --user `whoami`
+#  - source ./travis/gtest.sh
+
+script:
+  - scons
+
+#after_success:
+#  - coveralls --gcov "gcov-4.9" --exclude test --exclude googletest --root . --build-root ".build/debug" --gcov-options '\-lp'
+#  - find .build/debug -type f
+
+#after_failure:
+#  - cat ./.build/config.log
