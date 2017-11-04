@@ -7,7 +7,7 @@ user_libs = ['libboost_date_time.so.1.54.0',
              'libboost_system.so.1.54.0',
              'libxerces-c-3.1.so']
 
-env = Environment(CPPPATH=['#'],
+env = Environment(CPPPATH=['#', '/usr/include'],
                   CPPFLAGS=['-Wno-multichar', '-std=c++11', '-s', '-O3', '-fdata-sections', '-ffunction-sections'],
                   LINKFLAGS=['-Wl,--gc-sections'],
                   LIBPATH=['#'])
@@ -46,4 +46,5 @@ def _copy_user_libs():
            os.stat(dst).st_size != os.stat(src).st_size or \
            os.stat(dst).st_mtime != os.stat(src).st_mtime:
             shutil.copy2(src, dst)
-_copy_user_libs()
+if not 'TRAVIS' in os.environ:
+    _copy_user_libs()

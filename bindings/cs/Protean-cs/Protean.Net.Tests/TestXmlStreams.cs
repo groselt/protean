@@ -325,7 +325,7 @@ namespace Protean.Test
         [Test]
         public void TestXmlValidationSuccessWithEmbeddedSchemaReference()
         {
-            var xmlPath = Path.Combine(TestContext.CurrentContext.TestDirectory, @"xml\shiporder_valid.xml");
+            var xmlPath = Path.Combine(TestContext.CurrentContext.TestDirectory, @"xml/shiporder_valid.xml");
             string baseUri = System.IO.Path.GetFullPath(xmlPath);
 
             using (System.IO.TextReader textReader = new System.IO.StreamReader(xmlPath))
@@ -343,9 +343,9 @@ namespace Protean.Test
         }
 
         [Test]
-        [TestCase(@"xml\shiporder_invalid.xml", "Validation Error")]
-        [TestCase(@"xml\shiporder_non_existent_schema.xml", "Validation Warning")]
-        [TestCase(@"xml\shiporder_no_schema.xml", "Validation Warning")]
+        [TestCase(@"xml/shiporder_invalid.xml", "Validation Error")]
+        [TestCase(@"xml/shiporder_non_existent_schema.xml", "Validation Warning")]
+        [TestCase(@"xml/shiporder_no_schema.xml", "Validation Warning")]
         public void TestXmlValidationFailureWithEmbeddedSchemaReference(string xmlPath, string expectedMessage)
         {
             xmlPath = Path.Combine(TestContext.CurrentContext.TestDirectory, xmlPath);

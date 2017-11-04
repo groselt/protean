@@ -1,5 +1,7 @@
 # Protean #
 
+[![Build Status](https://travis-ci.org/proteanic/protean.svg?branch=master)](https://travis-ci.org/proteanic/protean)
+
 ## Description ##
 
 *Protean* is a library for representing hierarchical data in a uniform way
@@ -9,7 +11,7 @@ The library defines *a variant object* that can hold primitive data as well as
 collections (e.g. lists, dictionaries) with arbitrary depth. The variant can be
 inspected, enumerated, and/or serialised to XML/binary format.
 
-Protean has implementations in `C++` and `C#`.
+Protean has implementations in `C++`, `C#` and `Python`.
 
 ## Compilation ##
 

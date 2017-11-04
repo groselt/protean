@@ -1,0 +1,23 @@
+sudo: true
+language: cpp
+compiler: gcc
+dist: trusty
+before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+install: sudo apt-get install -qq g++-5
+addons: 
+  apt:
+    sources:
+      - sourceline: 'deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main'
+        key_url: 'https://packages.microsoft.com/keys/microsoft.asc'
+    packages: 
+      - libboost-all-dev
+      - libxerces-c-dev
+      - dotnet-sharedframework-microsoft.netcore.app-1.0.5
+      - dotnet-sdk-2.0.2
+
+script:
+  - scons
+  - ./protean_test
+  - ./build-bindings.sh
