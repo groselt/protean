@@ -46,4 +46,4 @@ def _copy_user_libs():
            os.stat(dst).st_size != os.stat(src).st_size or \
            os.stat(dst).st_mtime != os.stat(src).st_mtime:
             shutil.copy2(src, dst)
-_copy_user_libs()
+#_copy_user_libs()
