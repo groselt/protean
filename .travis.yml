@@ -35,6 +35,7 @@ addons:
 
 script:
   - scons
+  - ./protean_test
 
 #after_success:
 #  - coveralls --gcov "gcov-4.9" --exclude test --exclude googletest --root . --build-root ".build/debug" --gcov-options '\-lp'
