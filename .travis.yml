@@ -1,8 +1,6 @@
 sudo: true
 language: cpp
 compiler: gcc
-#dotnet: 2.0.0
-#mono: none
 dist: trusty
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
@@ -20,6 +18,6 @@ addons:
       - dotnet-sdk-2.0.2
 
 script:
-  #- scons
-  #- ./protean_test
+  - scons
+  - ./protean_test
   - ./build-bindings.sh
