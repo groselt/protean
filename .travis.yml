@@ -19,6 +19,6 @@ addons:
       - dotnet-sdk-2.0.2
 
 script:
-  - scons
+  #- scons
   - ./protean_test
   - ./build-bindings.sh
