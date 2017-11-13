@@ -16,9 +16,10 @@ addons:
     packages: 
       - libboost-all-dev
       - libxerces-c-dev
+      - dotnet-sharedframework-microsoft.netcore.app-1.0.5
       - dotnet-sdk-2.0.2
 
 script:
   #- scons
-  - ./protean_test
+  #- ./protean_test
   - ./build-bindings.sh
